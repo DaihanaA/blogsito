@@ -10,17 +10,17 @@ class BlogPost(models.Model):
 
     READ_PERMISSIONS = [
         (PUBLIC, 'Public'),
-      #  (AUTHENTICATED, 'Authenticated'),
-       (AUTHOR, 'Author'),
-       (TEAM, 'Team'),
+        (AUTHENTICATED, 'Authenticated'),
+        (AUTHOR, 'Author'),
+        (TEAM, 'Team'),
        
     ]
     
     EDIT_PERMISSIONS = [
-     #   (PUBLIC, 'Public'),
-      #   (AUTHENTICATED, 'Authenticated'),
-        (AUTHOR, 'Author'),
-        (TEAM, 'Team'),
+    (PUBLIC, 'Public'),
+    (AUTHENTICATED, 'Authenticated'),
+    (AUTHOR, 'Author'),
+    (TEAM, 'Team'),
     ]
     
     author = models.ForeignKey(User, on_delete=models.CASCADE)
